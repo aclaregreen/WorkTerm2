@@ -70,6 +70,10 @@ header ul li a:hover {
   background-color: #00796b;
 }
 
+.images {
+  flex-direction: row;
+}
+
 .UofG-logo,
 .gryphon {
   display: block;
