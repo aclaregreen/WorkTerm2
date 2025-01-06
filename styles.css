@@ -1,4 +1,10 @@
 /* General Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -10,43 +16,54 @@ body {
 
 h1 {
   margin-bottom: 10px;
-  color: #ffffff;
+  text-align: center;
+  color: red;
+  font-size: 4em;
 }
-
 
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #004d40;
-  margin-bottom: 10px;
+  margin: 10px 0;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-size: 2em;
+  color: #8B0000;
+  line-height: 1.2;
+  border-bottom: none;
+}
+
+h7 {
+  font-weight: bold;
+  display: inline-block;
 }
 
 a {
   text-decoration: none;
   color: #004d40;
+  opacity: 0.7;
+  transition: 0.5s;
 }
 
 a:hover {
+  opacity: 1;
   color: #00796b;
 }
 
 /* Header Styles */
 header {
-  background-color: #004d40;
+  background-color: black;
   color: #fff;
-  padding: 20px 0;
+  padding: 70px 30px 20px;
 }
 
 .headerContainer {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
+  width: 100%;
 }
 
 header h1 {
-  text-align: center;
   margin: 0;
   font-size: 2.5em;
 }
@@ -59,21 +76,19 @@ header ul {
   margin-top: 10px;
 }
 
-header ul li {
-  margin: 0 10px;
-}
-
 header ul li a {
-  color: #fff;
-  font-size: 1.1em;
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
   padding: 5px 10px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, opacity 0.5s;
 }
 
 header ul li a:hover {
   background-color: #00796b;
-  color: #fff;
+  opacity: 1;
 }
 
 .images {
@@ -85,6 +100,8 @@ header ul li a:hover {
 
 .UofG-logo,
 .gryphon {
+  position: absolute;
+  top: 0;
   display: block;
   margin: 10px auto;
   border-radius: 10px;
@@ -100,15 +117,6 @@ header ul li a:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.page h2,
-.page h3,
-.page h4,
-.page h5,
-.page h6 {
-  border-bottom: 2px solid #00796b;
-  padding-bottom: 5px;
-}
-
 .page img {
   margin-top: 20px;
   max-width: 100%;
@@ -118,34 +126,116 @@ header ul li a:hover {
 
 /* Footer */
 footer {
-  background-color: #004d40;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 70px 30px 20px;
 }
 
 .footerContainer {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-.footerBottom {
-  margin-top: 10px;
-  font-size: 0.9em;
+  width: 100%;
 }
 
 .socialIcons {
-  margin: 10px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .socialIcons a {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 1.5em;
-  transition: color 0.3s;
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.socialIcons a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
 }
 
 .socialIcons a:hover {
-  color: #00796b;
+  background-color: black;
+}
+
+.socialIcons a:hover i {
+  color: white;
+}
+
+.footerBottom {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: white;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 700px) {
+  .UofG-logo,
+  .gryphon {
+    display: none;
+  }
+
+  main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .menu ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .socialIcons a {
+    padding: 8px;
+    margin: 4px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1920px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  .UofG-logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .gryphon {
+    width: 333px;
+    height: 150px;
+  }
+
+  main {
+    font-size: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
+@media (min-width: 1921px) {
+  h1 {
+    font-size: 5em;
+  }
+
+  main {
+    font-size: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
 }
