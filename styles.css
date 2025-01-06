@@ -48,8 +48,13 @@ h6 {
 }
 
 h7 {
-  font-weight: bold;
-  display: inline-block;
+  margin: 10px 0;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-size: 2em;
+  color: #8B0000;
+  line-height: 1.2;
+  border-bottom: none;
 }
 
 a {
